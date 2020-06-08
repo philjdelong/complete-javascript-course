@@ -50,10 +50,33 @@ var lastName = "DeLong";
 var jobTitle = "Software Developer";
 var age = 30;
 
-if (age > 18) {
-	console.log(firstName + " " + lastName + " is an adult");
-	console.log("Should have known, they're a " + age + " year-old " + jobTitle + "...");
-} else {
-	console.log(firstName + " " + lastName + " is not an adult");
-	console.log("They're only " + age + "!");
+// if (age > 18) {
+// 	console.log(firstName + " " + lastName + " is an adult");
+// 	console.log("Should have known, they're a " + age + " year-old " + jobTitle + "...");
+// } else {
+// 	console.log(firstName + " " + lastName + " is not an adult");
+// 	console.log("They're only " + age + "!");
+// }
+
+
+age >= 18 ? console.log(firstName + " is an adult.")
+: console.log(firstName + " is not an adult")
+
+var adult = age >= 18 ? "adult" : "child";
+console.log(adult);
+
+var job = "teacher";
+
+switch (job) {
+	case "teacher":
+		console.log(firstName + " is a teacher.");
+		break;
+	case "driver":
+		console.log(firstName + " is a driver.");
+		break;
+	case "designer":
+		console.log(firstName + " is a designer.");
+		break;
+	default:
+		console.log(firstName + " does something else.");
 }
