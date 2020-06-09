@@ -3,28 +3,31 @@
 	// bill > 50 && bill < 200: 15%, 
 	// bill > 200: 10%
 
-var preTipBills = [124, 48, 268, 180, 42];
-var tips = [];
-var totalBills = [];
+var billList = {
+	preTip: [124, 48, 268, 180, 42],
+	tips: [],
+	totalBills: []
+}
 
 function tipCalculator(list) {
-	for (var i = 0; i < list.length; i++) {
-		if (list[i] < 50) {
-			var tip = list[i] * .2;
-		} else if (list[i] > 50 && list[i] < 200) {
-			var tip = list[i] * .15;
+	for (var i = 0; i < list.preTip.length; i++) {
+		if (list.preTip[i] < 50) {
+			var tip = (list.preTip[i] * .2);
+		} else if (list.preTip[i] > 50 && list.preTip[i] < 200) {
+			var tip = (list.preTip[i] * .15);
 		} else {
-			var tip = list[i] * .1;
+			var tip = (list.preTip[i] * .1);
 		}
-		var totalBill = list[i] + tip;
-		tips.push(tip);
-		totalBills.push(totalBill);
+		var totalBill = list.preTip[i] + tip;
+		list.tips.push(tip.toFixed(2));
+		list.totalBills.push(totalBill.toFixed(2));
 	}
 }
 
-tipCalculator(preTipBills);
-console.log(tips);
-console.log(totalBills);
+tipCalculator(billList);
+console.log(billList.preTip, billList.tips, billList.totalBills);
+// console.log(billList.tips);
+// console.log(billList.totalBills);
 
 
 
