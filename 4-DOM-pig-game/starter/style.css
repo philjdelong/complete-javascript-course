@@ -70,8 +70,8 @@ body {
     margin-bottom: 130px;
 }
 
-.active { background-color: #f7f7f7; }
-.active .player-name { font-weight: 300; }
+#active { background-color: #f7f7f7; }
+#active .player-name { font-weight: 300; }
 
 .active .player-name::after {
     content: "\2022";
@@ -99,7 +99,7 @@ body {
     color: #222;
 }
 
-.player-current-score {
+.player-current-roll {
     font-size: 30px;
 }
 
@@ -139,7 +139,7 @@ i {
 
 .btn-new { top: 45px;}
 .btn-roll { top: 403px;}
-.btn-hold { top: 467px;}
+.btn-reset { top: 467px;}
 
 .dice {
     position: absolute;
