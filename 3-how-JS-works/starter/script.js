@@ -1,21 +1,32 @@
 ///////////////////////////////////////
 // Lecture: Hoisting
+function start() {
+    var a = "Hey";
+    first();
+    function first() {
+        var b = "Hi";
+        second();
+        function second() {
+            var c = "Hello";
+            console.log(a, b, c);
+        }
+    }
+}
+start();
 
+var phil = {
+    name: "Phil",
+    age: 30,
+    showInfo: function() {
+        console.log("Phil is", this);
+    }
+}
+phil.showInfo();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function scopeThis() {
+    console.log(this);
+}
+scopeThis();
 
 ///////////////////////////////////////
 // Lecture: Scoping
@@ -66,12 +77,3 @@ function third() {
 
 ///////////////////////////////////////
 // Lecture: The this keyword
-
-
-
-
-
-
-
-
-
